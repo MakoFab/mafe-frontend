@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-mafe-oscuro:  #085041;
+    --color-mafe:         #1D9E75;
+    --color-mafe-claro:   #E1F5EE;
+  }
+
+  html {
+    @apply text-gray-900;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  body {
+    @apply bg-gray-50;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-mafe text-white px-4 py-2 rounded-lg font-medium
+           hover:bg-mafe-hover transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply bg-white text-mafe border border-mafe px-4 py-2 rounded-lg font-medium
+           hover:bg-mafe-claro transition-colors;
+  }
+  .input-base {
+    @apply w-full border border-gray-300 rounded-lg px-3 py-2 text-sm
+           focus:outline-none focus:ring-2 focus:ring-mafe focus:border-transparent;
+  }
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-100 p-4;
+  }
+  .badge-info   { @apply text-xs bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full; }
+  .badge-purple { @apply text-xs bg-purple-50 text-purple-600 px-2 py-0.5 rounded-full; }
+  .badge-cyan   { @apply text-xs bg-cyan-50 text-cyan-600 px-2 py-0.5 rounded-full; }
+  .badge-indigo { @apply text-xs bg-indigo-50 text-indigo-600 px-2 py-0.5 rounded-full; }
+  .badge-gray   { @apply text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full; }
+}
