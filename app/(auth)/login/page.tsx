@@ -1,6 +1,7 @@
 ﻿'use client'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 import api from '@/lib/api'
 import { guardarSesion } from '@/lib/auth'
 import { AuthResponse } from '@/types'
@@ -90,9 +91,14 @@ export default function LoginPage() {
           </form>
         </div>
 
-        <p className="text-center text-xs text-gray-400 mt-6">
-          Mafe © {new Date().getFullYear()} · Bogotá, Colombia
+        <p className="text-center text-xs text-gray-400 mt-6" suppressHydrationWarning>
+          Mafe © 2025 · Bogotá, Colombia
         </p>
+        <div className="text-center mt-3">
+          <Link href="/" className="text-xs text-mafe-oscuro/60 hover:text-mafe-oscuro transition-colors inline-flex items-center gap-1">
+            ← Volver al sitio web
+          </Link>
+        </div>
       </div>
     </main>
   )

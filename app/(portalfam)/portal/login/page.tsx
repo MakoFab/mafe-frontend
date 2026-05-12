@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 import api from '@/lib/api'
 import { guardarSesion } from '@/lib/auth'
 import { AuthResponse } from '@/types'
@@ -101,6 +102,9 @@ export default function PortalLoginPage() {
       </div>
 
       <p className="text-white/40 text-xs mt-8">© 2025 Casa Geriátrica Mafe · Bogotá, Colombia</p>
+      <Link href="/" className="text-white/50 hover:text-white/80 transition-colors text-xs mt-2 inline-flex items-center gap-1">
+        ← Volver al sitio web
+      </Link>
     </div>
   )
 }
